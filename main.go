@@ -1,0 +1,17 @@
+package main
+
+import (
+	"log"
+	"net/http"
+)
+
+// Exercice 1
+func main() {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "index.html")
+	})
+	http.HandleFunc("/welcome", welcomeHandler)
+	http.HandleFunc("/game", CompleteParoleHandler)
+	log.Println("Server is running on http://localhost:8081")
+	log.Fatal(http.ListenAndServe(":8081", nil))
+}
