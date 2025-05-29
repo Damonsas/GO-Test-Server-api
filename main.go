@@ -10,6 +10,7 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "index.html")
 	})
+	http.Handle("/style.css", http.FileServer(http.Dir(".")))
 	http.HandleFunc("/welcome", welcomeHandler)
 	http.HandleFunc("/game", CompleteParoleHandler)
 	log.Println("Server is running on http://localhost:8081")
