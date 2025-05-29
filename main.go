@@ -8,6 +8,7 @@ import (
 // Exercice 1
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		log.Printf("%s %s", r.Method, r.URL.Path)
 		http.ServeFile(w, r, "index.html")
 	})
 	http.HandleFunc("/style.css", func(w http.ResponseWriter, r *http.Request) {
