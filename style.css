@@ -13,7 +13,7 @@ body {
   box-sizing: inherit;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: #444;
   text-align: center;
 }
@@ -50,6 +50,13 @@ p {
 #correct{
   color: #005f7a;
   text-align: center;
+}
+
+#correct.success {
+  color: #007137;
+}
+#correct.error {
+  color: #a93634;
 }
 
 ol {
