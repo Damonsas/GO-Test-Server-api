@@ -61,3 +61,11 @@ a{
   text-decoration: none;
   color: #d8d8d8;
 }
+
+form{
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+
+}
