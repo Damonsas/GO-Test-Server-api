@@ -20,7 +20,7 @@ func CompleteParoleHandler(w http.ResponseWriter, r *http.Request) {
 		answer1 := r.FormValue("answer1")
 		answer2 := r.FormValue("answer2")
 		if answer1 != "" {
-			if answer1 == "want" {
+			if answer1 == "want" || answer1 == "Want" || answer1 == "WANT" {
 				data.Message1 = "bonne réponse"
 				data.Class1 = "success"
 
@@ -30,7 +30,7 @@ func CompleteParoleHandler(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 		if answer2 != "" {
-			if answer2 == "oui qu'il n'y a" {
+			if answer2 == "oui qu'il n'y a" || answer2 == "Oui qu'il n'y a" || answer2 == "OUI QU'IL N'Y A" {
 				data.Message2 = "bonne réponse"
 				data.Class2 = "success"
 			} else {
