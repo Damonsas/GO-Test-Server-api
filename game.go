@@ -5,8 +5,6 @@ import (
 	"net/http"
 )
 
-// Exercice 4
-
 type CompleteParoleData struct {
 	Message1 string
 	Class1   string
