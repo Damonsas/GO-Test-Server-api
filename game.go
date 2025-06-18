@@ -12,6 +12,8 @@ type CompleteParoleData struct {
 	Class1   string
 	Message2 string
 	Class2   string
+	Answer1  string
+	Answer2  string
 }
 
 func CompleteParoleHandler(w http.ResponseWriter, r *http.Request) {
@@ -19,6 +21,8 @@ func CompleteParoleHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
 		answer1 := r.FormValue("answer1")
 		answer2 := r.FormValue("answer2")
+		data.Answer1 = answer1
+		data.Answer2 = answer2
 		if answer1 != "" {
 			if answer1 == "want" || answer1 == "Want" || answer1 == "WANT" {
 				data.Message1 = "bonne réponse"
