@@ -17,7 +17,6 @@ func welcomeHandler(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// Exercice 3
 func FormValueHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
 		name := r.FormValue("name")
